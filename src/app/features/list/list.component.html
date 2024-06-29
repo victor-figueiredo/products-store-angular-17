@@ -1,6 +1,8 @@
-<p>Produtos</p>
-<ul>
-  @for (product of productsList; track product.id) {
-  <app-card [product]="product"></app-card>
-  }
-</ul>
+<div class="action-container">
+  <a color="primary" mat-raised-button [routerLink]="['/create-product']">
+    Criar produto
+  </a>
+</div>
+@for (product of productsList; track product.id) {
+<app-card [product]="product"></app-card>
+}
