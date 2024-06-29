@@ -39,11 +39,7 @@ export class CreateComponent {
     this.productsService
       .post({ title: this.form.controls.title.value })
       .subscribe(() => {
-        this.snackbar.open('Produto salvo', 'Ok', {
-          duration: 2000,
-          horizontalPosition: 'end',
-          verticalPosition: 'top',
-        });
+        this.snackbar.open('Produto salvo', 'Ok');
         this.router.navigateByUrl('/');
       });
   }
