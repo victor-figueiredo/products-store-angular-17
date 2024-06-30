@@ -1,8 +1,12 @@
 {
   "products": [
     {
-      "title": "Blusa",
-      "id": "1"
+      "id": "8eb0",
+      "title": "Blusa"
+    },
+    {
+      "id": "6861",
+      "title": "Camisa"
     }
   ]
 }
