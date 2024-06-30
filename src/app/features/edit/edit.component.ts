@@ -5,12 +5,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ProductsService } from '../../shared/services/products.service';
 import { Product } from '../../shared/interfaces/products.interface';
 import { FormComponent } from '../../shared/components/form/form.component';
-import { MatButtonModule } from '@angular/material/button';
+import { BackToListComponent } from '../../shared/components/back-to-list/back-to-list.component';
 
 @Component({
   selector: 'app-edit',
   standalone: true,
-  imports: [FormComponent, MatButtonModule],
+  imports: [FormComponent, BackToListComponent],
   templateUrl: './edit.component.html',
   styleUrl: './edit.component.scss',
 })

@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { filter } from 'rxjs';
 import { ConfirmationDialogService } from '../../shared/services/confirmation-dialog.service';
 import { NoItemsComponent } from './components/no-items/no-items.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-list',
@@ -22,6 +23,7 @@ export class ListComponent {
   productsService = inject(ProductsService);
   router = inject(Router);
   confirmationDialog = inject(ConfirmationDialogService);
+  snackbar = inject(MatSnackBar);
 
   onEdit(product: Product) {
     this.router.navigate(['/edit-product', product.id]);
@@ -33,6 +35,7 @@ export class ListComponent {
       .pipe(filter((answer) => answer))
       .subscribe(() =>
         this.productsService.delete(product.id).subscribe(() => {
+          this.snackbar.open('Produto salvo', 'Ok');
           this.productsService.getAll().subscribe((products) => {
             this.productsList.set(products);
           });
