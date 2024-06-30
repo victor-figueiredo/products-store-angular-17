@@ -1,9 +1,4 @@
 <div class="action-container">
   <a mat-raised-button (click)="goBack()"> Voltar </a>
 </div>
-<form class="form-container" [formGroup]="form" (ngSubmit)="onSubmit()">
-  <mat-form-field>
-    <input matInput type="text" formControlName="title" placeholder="Título*" />
-  </mat-form-field>
-  <button type="submit" mat-raised-button color="accent">Salvar</button>
-</form>
+<app-form [product]="product" (done)="onSubmit($event)"></app-form>
