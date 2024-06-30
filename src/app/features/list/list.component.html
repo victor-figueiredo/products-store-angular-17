@@ -4,7 +4,7 @@
   </a>
 </div>
 
-@for (product of productsList; track product.id) {
+@for (product of productsList(); track product.id) {
 <app-card
   [product]="product"
   (edit)="onEdit(product)"
