@@ -46,4 +46,8 @@ export class EditComponent {
         this.router.navigateByUrl('/');
       });
   }
+
+  goBack() {
+    this.router.navigateByUrl('/');
+  }
 }

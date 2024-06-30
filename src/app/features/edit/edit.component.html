@@ -1,3 +1,6 @@
+<div class="action-container">
+  <a mat-raised-button (click)="goBack()"> Voltar </a>
+</div>
 <form class="form-container" [formGroup]="form" (ngSubmit)="onSubmit()">
   <mat-form-field>
     <input matInput type="text" formControlName="title" placeholder="Título*" />
